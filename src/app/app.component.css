@@ -1,0 +1,44 @@
+
+h2 {
+    font-size: 2.5em;
+    color: rgb(111, 64, 117);
+}
+.header{
+    font-family: monospace;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2px;
+   
+}
+
+.class-active{
+    /* color: rgb(197, 24, 165); */
+    color: #fc2e9f;
+}
+
+a:hover {
+    color: #8ac6d1;
+}
+
+.nav-links {
+    list-style-type: none;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: rgb(111, 64, 117);
+}
+
+a{
+    text-decoration: none;
+}
+
+.footer{
+    font-family: monospace;
+    background-color: #bbded6;
+    display: flex;
+    border-radius: 2px;
+    justify-content: space-around;
+    margin-top: 25px;
+    
+}

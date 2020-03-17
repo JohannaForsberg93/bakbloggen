@@ -1,0 +1,9 @@
+*{
+    font-family: monospace;
+    text-align: center;
+}
+
+div button{
+    display: block;
+    margin: auto;
+}
