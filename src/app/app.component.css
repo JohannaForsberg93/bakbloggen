@@ -13,13 +13,9 @@ h2 {
    
 }
 
-.class-active{
-    /* color: rgb(197, 24, 165); */
-    color: #fc2e9f;
-}
-
-a:hover {
-    color: #8ac6d1;
+.class-title{
+    text-decoration-style: none;
+    font-size: 3em;
 }
 
 .nav-links {
@@ -28,6 +24,16 @@ a:hover {
     font-weight: bolder;
     color: rgb(111, 64, 117);
 }
+
+.class-active{
+    color: #fc2e9f;
+}
+
+a:hover {
+    color: #8ac6d1;
+}
+
+
 
 a{
     text-decoration: none;

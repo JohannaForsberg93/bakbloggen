@@ -7,7 +7,7 @@ import { LoggaInComponent } from './logga-in/logga-in.component';
 
 
 const routes: Routes = [
-  {path: "", component: StartsidaComponent},
+  {path: "start", component: StartsidaComponent},
   {path: "senaste-artiklar", component: SenasteArtiklarComponent},
   {path: "alla-artiklar", component: AllaArtiklarComponent},
   {path: "logga-in", component: LoggaInComponent}

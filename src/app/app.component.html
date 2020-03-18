@@ -1,33 +1,44 @@
 <header class="header">
 
-  <div>
-    <h2>Bakbloggen</h2>
+  <div class="class-title">
+    <a routerLink="/start"
+    [routerLinkActive]="'class-active'">
+      Bakbloggen</a>
   </div>
 
-  <!--Varför funkar inte classen class-active ?-->
+ 
   <nav>
     <ul class="nav-links">
 
-      <li
-      [routerLinkActive]="['class-active']"
-      [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/senaste-artiklar"> Senaste artiklar</a>
+      <li>
+        <a routerLink="/start"
+        [routerLinkActive]="'class-active'"> Startsida</a>
       </li>
 
-      <li 
-      [routerLinkActive]="['class-active']"
-      [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/alla-artiklar" >Alla artiklar
+      <li>
+        <a routerLink="/senaste-artiklar"
+        [routerLinkActive]="'class-active'"> Senaste artiklar</a>
+      </li>
+
+      <li>
+        <a routerLink="/alla-artiklar" 
+        [routerLinkActive]="['class-active']" >Alla artiklar
         </a>
       </li>
 
-      <li 
-      [routerLinkActive]="['class-active']"
-      [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/logga-in" > Logga in</a>
+      <li>
+        <a routerLink="/logga-in"
+        [routerLinkActive]="['class-active']"> Logga in</a>
       </li>
 
-      <li>Lägg till artikel</li> <!--Får bara visas om man är inloggad, ska den vara i logga in component? -->
+      <li>
+        
+          <a> Skriv artikel</a>
+        
+
+      </li> <!--Kan vara synlig hela tiden och bli klickbar när man "loggat in" -->
+      
+      
     </ul>
   </nav>
 
@@ -36,7 +47,7 @@
 <main>
   <router-outlet>  
     
-  </router-outlet> <!--Vad ska man ha här ?-->
+  </router-outlet> 
 </main>
 
 
