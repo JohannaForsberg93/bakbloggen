@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { InloggningService } from '../inloggning.service'
 
 @Component({
   selector: 'app-startsida',
@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./startsida.component.css']
 })
 export class StartsidaComponent implements OnInit {
+  
 
-  constructor() { }
+  constructor(public _InloggningService: InloggningService) { }
 
   ngOnInit(): void {
    
   }
-
 
 }

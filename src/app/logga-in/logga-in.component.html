@@ -1,10 +1,14 @@
 <h2>Inloggning</h2>
-<p>Är du helt säker på att du är en bloggare och vill logga in?</p><br>
+<p *ngIf="inloggad == false">Är du helt säker på att du är en bloggare och vill logga in?</p><br>
 <div>
-    <button>JA</button>
+    <button (click)="loggaIn()">JA</button>
 </div>
+
+<p *ngIf="inloggad == true"> Nu är du inloggad.</p>
+
 <br>
 <div>
-    <button>Logga ut</button>
+    <button (click)="loggaUt()">Logga ut</button>
+    <p *ngIf="inloggad == false">Nu är du utloggad</p>
 </div>
 

@@ -8,6 +8,9 @@ import { InloggningService } from '.././inloggning.service'
 })
 export class LoggaInComponent implements OnInit {
 
+  inloggad: boolean = false;
+ 
+
   constructor(public _InloggningService: InloggningService) {
    }
 
@@ -15,5 +18,18 @@ export class LoggaInComponent implements OnInit {
     
   }
 
+  loggaIn(){
+   this._InloggningService.inloggning(); 
+    //Hämtar inloggning-funktion från Service
+   this.inloggad = this._InloggningService.inloggad;
+    //inloggad får värdet av inloggad från Service (samma namn fast olika class-proprty)
+
+    console.log("Nu körs loggaIn-funktionen som hämtar värde från service")
+  }
+
+  loggaUt(){
+    this._InloggningService.utloggning();
+    this.inloggad = this._InloggningService.inloggad;
+  }
 
 }

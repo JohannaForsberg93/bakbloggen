@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InloggningService } from './inloggning.service' 
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bakbloggen';
+
+  constructor(public inloggningService: InloggningService){}
+
+  ngOnInit(){
+
+}
+
 }

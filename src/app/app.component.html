@@ -31,9 +31,11 @@
         [routerLinkActive]="['class-active']"> Logga in</a>
       </li>
 
-      <li>
+      <li *ngIf="inloggningService.inloggad">
         
-          <a> Skriv artikel</a>
+        <a routerLink="/skriv-artikel"
+        [routerLinkActive]="['class-active']"
+        > Skriv artikel</a>
         
 
       </li> <!--Kan vara synlig hela tiden och bli klickbar när man "loggat in" -->
@@ -44,12 +46,13 @@
 
 </header>
 
+<!-- {{korv}} -->
+
 <main>
   <router-outlet>  
     
   </router-outlet> 
 </main>
-
 
 
 <footer class="footer">

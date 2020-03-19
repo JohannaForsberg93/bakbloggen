@@ -5,6 +5,22 @@ import { Injectable } from '@angular/core';
 })
 export class InloggningService {
 
+  inloggad: boolean;
+  
+
   constructor() { }
+
+  inloggning(){
+    this.inloggad = true;
+    
+
+  }
+
+  utloggning(){
+    this.inloggad = false;
+    
+  }
+
+  
 
 }
