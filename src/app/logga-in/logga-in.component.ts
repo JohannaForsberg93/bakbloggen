@@ -11,7 +11,7 @@ export class LoggaInComponent implements OnInit {
   inloggad: boolean = false;
  
 
-  constructor(public _InloggningService: InloggningService) {
+  constructor(public InloggningService: InloggningService) {
    }
 
   ngOnInit(): void {
@@ -19,17 +19,17 @@ export class LoggaInComponent implements OnInit {
   }
 
   loggaIn(){
-   this._InloggningService.inloggning(); 
+   this.InloggningService.inloggning(); 
     //Hämtar inloggning-funktion från Service
-   this.inloggad = this._InloggningService.inloggad;
+   this.inloggad = this.InloggningService.inloggad;
     //inloggad får värdet av inloggad från Service (samma namn fast olika class-proprty)
 
     console.log("Nu körs loggaIn-funktionen som hämtar värde från service")
   }
 
   loggaUt(){
-    this._InloggningService.utloggning();
-    this.inloggad = this._InloggningService.inloggad;
+    this.InloggningService.utloggning();
+    this.inloggad = this.InloggningService.inloggad;
   }
 
 }

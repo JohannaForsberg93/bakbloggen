@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { StartsidaComponent } from './startsida/startsida.component';
 import { SenasteArtiklarComponent } from './senaste-artiklar/senaste-artiklar.component';
@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { InloggningService } from './inloggning.service';
 import { ArtiklarService } from './artiklar.service';
 import { SkrivArtikelComponent } from './skriv-artikel/skriv-artikel.component'
+
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SkrivArtikelComponent } from './skriv-artikel/skriv-artikel.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [InloggningService, ArtiklarService],
   bootstrap: [AppComponent]

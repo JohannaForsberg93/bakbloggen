@@ -1,66 +1,49 @@
 <header class="header">
 
   <div class="class-title">
-    <a routerLink="/start"
-    [routerLinkActive]="'class-active'">
+    <a routerLink="/start" [routerLinkActive]="'class-active'">
       Bakbloggen</a>
   </div>
-
- 
   <nav>
     <ul class="nav-links">
 
       <li>
-        <a routerLink="/start"
-        [routerLinkActive]="'class-active'"> Startsida</a>
+        <a routerLink="/start" [routerLinkActive]="'class-active'"> Startsida</a>
       </li>
 
       <li>
-        <a routerLink="/senaste-artiklar"
-        [routerLinkActive]="'class-active'"> Senaste artiklar</a>
+        <a routerLink="/senaste-artiklar" [routerLinkActive]="'class-active'"> Senaste artiklar</a>
       </li>
 
       <li>
-        <a routerLink="/alla-artiklar" 
-        [routerLinkActive]="['class-active']" >Alla artiklar
+        <a routerLink="/alla-artiklar" [routerLinkActive]="['class-active']">Alla artiklar
         </a>
       </li>
 
       <li>
-        <a routerLink="/logga-in"
-        [routerLinkActive]="['class-active']"> Logga in</a>
+        <a routerLink="/logga-in" [routerLinkActive]="['class-active']"> Logga in</a>
       </li>
 
-      <li *ngIf="inloggningService.inloggad">
-        
-        <a routerLink="/skriv-artikel"
-        [routerLinkActive]="['class-active']"
-        > Skriv artikel</a>
-        
+      <li *ngIf="inloggningService.inloggad == true">
 
-      </li> <!--Kan vara synlig hela tiden och bli klickbar när man "loggat in" -->
-      
-      
+        <a routerLink="/skriv-artikel" [routerLinkActive]="['class-active']"> Skriv artikel</a>
+
+      </li>
     </ul>
   </nav>
 
 </header>
 
-<!-- {{korv}} -->
-
 <main>
-  <router-outlet>  
-    
-  </router-outlet> 
+  <router-outlet>
+
+  </router-outlet>
 </main>
 
-
 <footer class="footer">
-  <div>
-    <p>Detta är en bakblogg som innehåller mumsiga recept! </p> 
+  <div class="footer-text">
+    <h5>Detta är en bakblogg som innehåller mumsiga recept!</h5>
   </div>
-   
+
 
 </footer>
-
-

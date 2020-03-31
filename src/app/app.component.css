@@ -45,6 +45,12 @@ a{
     display: flex;
     border-radius: 2px;
     justify-content: space-around;
-    margin-top: 25px;
+    margin-top: 50px;
     
+}
+
+.footer-text{
+    margin: 20px;
+    color: #25274d;
+    font-weight: 500;
 }
