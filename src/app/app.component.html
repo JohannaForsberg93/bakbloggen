@@ -27,7 +27,13 @@
         <a routerLink="/logga-in" > Logga in</a>
       </li>
 
-      <li>Lägg till artikel</li> <!--Får bara visas om man är inloggad, ska den vara i logga in component? -->
+      <li 
+      [routerLinkActive]="['class-active']"
+      [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/ny-artikel" > Lägg till artikel</a>
+      </li>
+
+      <!-- <li>Lägg till artikel</li> Får bara visas om man är inloggad, ska den vara i logga in component? -->
     </ul>
   </nav>
 
