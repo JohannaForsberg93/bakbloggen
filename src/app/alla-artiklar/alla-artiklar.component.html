@@ -1,4 +1,5 @@
 <h2>Här ska alla titlar på alla artiklar vara.</h2>
+<button (click)="deleteArtiklar()">clear localstorage!</button>
 <ul>
- <li *ngFor="let artikel of artiklar"> {{ artikel.title}} {{ artikel.content }} {{artikel.author}} {{artikel.timeToRead}} </li>
+ <li *ngFor="let artikel of artiklar"> {{ artikel.title }} </li>
 </ul>

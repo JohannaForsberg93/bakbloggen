@@ -1,58 +1,61 @@
-<header class="header">
-
-  <div>
-    <h2>Bakbloggen</h2>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+<div class="wrapper">
+  <div class="superheader"
+    [routerLinkActive]="['class-active']"
+    [routerLinkActiveOptions]="{exact: true}">
+    <div routerLink="">BakBloggen<img src="../assets/peach_1f351.png" alt="butt"></div>
   </div>
+  <div class="header">
+    <div class="header-wrapper">
+      <div
+        [routerLinkActive]="['class-active']"
+        [routerLinkActiveOptions]="{exact: true}">
+          <h2 routerLink=""> </h2>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li
+          [routerLinkActive]="['class-active']"
+          [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/senaste-artiklar"> senaste </a>
+          </li>
 
-  <!--Varför funkar inte classen class-active ?-->
-  <nav>
-    <ul class="nav-links">
+          <li 
+          [routerLinkActive]="['class-active']"
+          [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/alla-artiklar" >alla </a>
+          </li>
 
-      <li
-      [routerLinkActive]="['class-active']"
-      [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/senaste-artiklar"> Senaste artiklar</a>
-      </li>
+          <li 
+          [routerLinkActive]="['class-active']"
+          [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/ny-artikel" > lägg till </a>
+          </li>
 
-      <li 
-      [routerLinkActive]="['class-active']"
-      [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/alla-artiklar" >Alla artiklar
-        </a>
-      </li>
+          <li 
+          [routerLinkActive]="['class-active']"
+          [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/logga-in" > logga in</a>
+          </li>
 
-      <li 
-      [routerLinkActive]="['class-active']"
-      [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/logga-in" > Logga in</a>
-      </li>
-
-      <li 
-      [routerLinkActive]="['class-active']"
-      [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/ny-artikel" > Lägg till artikel</a>
-      </li>
-
-      <!-- <li>Lägg till artikel</li> Får bara visas om man är inloggad, ska den vara i logga in component? -->
-    </ul>
-  </nav>
-
-</header>
-
-<main>
-  <router-outlet>  
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <main><router-outlet></router-outlet>
+    <!-- <main>
+      Vad ska man ha här ?
+    </main> -->
+  </main>
+  <div class="footer">
+    <div>
+      <p>Detta är en bakblogg som innehåller mumsiga recept! </p> 
+    </div>
+  </div>
+  
     
-  </router-outlet> <!--Vad ska man ha här ?-->
-</main>
 
-
-
-<footer class="footer">
-  <div>
-    <p>Detta är en bakblogg som innehåller mumsiga recept! </p> 
-  </div>
-   
-
-</footer>
+</div>
 
 

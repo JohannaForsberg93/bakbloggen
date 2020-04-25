@@ -1,2 +1,8 @@
 <h2>Detta är startsidan</h2><br>
 <p>Här ska den senaste artikeln visas.</p>
+<ul>
+    <li> {{ artikel.title }} {{ artikel.content }} {{ artikel.timeToRead }} {{ artikel.author }} 
+        
+        <br><h2> {{ artikel.title.slice(0,1) }} </h2></li>
+    
+</ul>

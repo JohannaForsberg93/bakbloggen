@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArtiklarService } from '../artiklar.service';
 
 @Component({
   selector: 'app-senaste-artiklar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SenasteArtiklarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private artikelService: ArtiklarService) { }
+  artiklar;
   ngOnInit(): void {
+    this.artiklar = this.artikelService.getArtiklar();
   }
-
+  getArtiklar(){
+    return this.artikelService.getArtiklar();
+    
+  }
 }

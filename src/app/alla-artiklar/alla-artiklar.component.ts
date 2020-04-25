@@ -13,12 +13,13 @@ export class AllaArtiklarComponent implements OnInit {
   artiklar;
   ngOnInit(): void {
     this.artiklar = this.artikelService.getArtiklar();
-    console.log("title2: " + this.artiklar[0].title);
-    console.log("content2: " + this.artiklar[0].content);
-    
   }
   getArtiklar(){
     return this.artikelService.getArtiklar();
     
+  }
+  deleteArtiklar(){
+    this.artikelService.deleteArtiklar();
+    return this.artikelService.getArtiklar();
   }
 }
