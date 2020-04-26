@@ -1,12 +1,17 @@
-img{
+
+img {
+    height: 60px;
+    width: 60px;
+    padding: 10px;
     object-fit: contain;
 }
 .wrapper{
     
-    background-color: #f7f7f7;
+    /* background-color: #fae3d9; */
+    background-color: #ffb6b9;
     min-height: 130vh;
     display: grid;
-    grid-template-rows: 15em 3em 1fr 20em;
+    grid-template-rows: 15em 3em 1fr 3em;
     grid-template-areas:
     "superheader"
     "header"
@@ -14,15 +19,17 @@ img{
     "footer";
    
 }
+
 .superheader{
-    background-color: #f7f7f7;
+    font-family: 'Handlee', cursive;
+    background-color: #8ac6d1;
     grid-area: superheader;
-    color: #303030;
-    font-size: 8em;
+    color: #fae3d9;
+    font-size: 5em;
     padding: 0;
-    margin: 10px 10px 50px 10%;
-    text-shadow: 2px 2px 2px black;
-    font-style: italic;
+    text-align: center;
+    /* margin: 10px 10px 50px 10%; */
+    text-shadow: 2px 2px 2px rgb(43, 121, 180);
 }
 
 
@@ -31,7 +38,7 @@ img{
     cursor: default;
 } */
 nav{
-    background-color: #f7f7f7; 
+    background-color: #bbded6; 
     font-size: 2em;
     
     /* border-bottom: 1px solid grey; */
@@ -68,36 +75,22 @@ nav > ul{
    
 }
 
-
-
-.nav-links {
-    /* list-style-type: none; */
-    
-    
-    /* background-color: #303030;
-    background-color: #f7f7f7; */
-    
-    
-}
-
 .nav-links a{
     text-decoration: none;
     color: #303030; 
+    font-family: 'Trebuchet MS'
     /* av nån anledning så blir färgen bättre här än i .nav-links */
     
 }
 .class-active > a{
-    /* color: rgb(197, 24, 165); */
-    /* color: #fc2e9f; */
-    border-bottom: 3px solid #303030;
+    /* border-bottom: 3px solid #8ac6d1; */
+    border-bottom: 3px solid #fae3d9;
     border-radius: 5px;
 }
 
 
 .nav-links a:hover {
-    /* color: #8ac6d1;
-    color: #43d8c9; */
-    border-bottom: 3px solid #f10808;
+    border-bottom: 3px solid #fae3d9;
     border-radius: 5px;
 }
 main{
@@ -109,12 +102,11 @@ main{
     display: grid;
     grid-area: footer;
     font-family: monospace;
-    background-color: #080808;
-    
+    background-color: #bbded6;
     border-radius: 2px;
-    /* justify-content: space-around; */
-    
-    
+    justify-content: space-around;
+    height: 70px;
+
 }
 @media screen and (max-width: 1075px){
      .superheader{

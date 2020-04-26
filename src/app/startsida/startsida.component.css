@@ -1,4 +1,6 @@
 li{
+    border: 1p solid #303030;
+    color: #303030;
     font-size: 2em;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -7,13 +9,14 @@ li{
     "titel ." 
     "author timeToRead"
     "the_content the_content";
-    color: #303030;
+
 }
 .titel{
     font-size: 1.2em;
     font-weight: bold;
     grid-area: titel;
-    color: orangered;
+    color: #303030;
+    
     
 }
 .author{
@@ -30,4 +33,9 @@ li{
     padding-top: 30px;
     font-size: 0.6em;
     grid-area: the_content;
+    border: 1px solid #303030;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fae3d9;
+    
 }
