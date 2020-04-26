@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtiklarService } from '../artiklar.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-senaste-artiklar',
@@ -8,7 +9,7 @@ import { ArtiklarService } from '../artiklar.service';
 })
 export class SenasteArtiklarComponent implements OnInit {
 
-  constructor(private artikelService: ArtiklarService) { }
+  constructor(private artikelService: ArtiklarService, private router: Router) { }
   artiklar;
   ngOnInit(): void {
     this.artiklar = this.artikelService.getArtiklar();
@@ -16,5 +17,8 @@ export class SenasteArtiklarComponent implements OnInit {
   getArtiklar(){
     return this.artikelService.getArtiklar();
     
+  }
+  readIt(i:number){
+    this.router.navigate([''], {queryParams: {page: i}});
   }
 }

@@ -1,0 +1,33 @@
+li{
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "titel ." 
+    "author timeToRead"
+    "the_content the_content";
+    color: #303030;
+}
+.titel{
+    font-size: 1.2em;
+    font-weight: bold;
+    grid-area: titel;
+    color: orangered;
+    
+}
+.author{
+    margin-top: 2px;
+    font-size: 0.8em;
+    font-style: italic;
+    grid-area: author;
+}
+.timeToRead{
+    font-size: 0.8em;
+    grid-area: timeToRead;
+}
+.content{
+    padding-top: 30px;
+    font-size: 0.6em;
+    grid-area: the_content;
+}

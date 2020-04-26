@@ -3,47 +3,48 @@
 <div class="wrapper">
   <div class="superheader"
     [routerLinkActive]="['class-active']"
-    [routerLinkActiveOptions]="{exact: true}">
-    <div routerLink="">BakBloggen<img src="../assets/peach_1f351.png" alt="butt"></div>
+    [routerLinkActiveOptions]="{exact: true}"
+    routerLink="">Bakbloggen<img class="test" src="../assets/peach_1f351.png" alt="butt"/>
   </div>
   <div class="header">
-    <div class="header-wrapper">
-      <div
-        [routerLinkActive]="['class-active']"
-        [routerLinkActiveOptions]="{exact: true}">
-          <h2 routerLink=""> </h2>
-      </div>
       <nav>
         <ul class="nav-links">
           <li
           [routerLinkActive]="['class-active']"
           [routerLinkActiveOptions]="{exact: true}">
-          <a routerLink="/senaste-artiklar"> senaste </a>
+          <a routerLink=""> Hem </a>
+          </li>
+          <li
+          [routerLinkActive]="['class-active']"
+          [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/senaste-artiklar"> Senaste </a>
           </li>
 
           <li 
           [routerLinkActive]="['class-active']"
           [routerLinkActiveOptions]="{exact: true}">
-            <a routerLink="/alla-artiklar" >alla </a>
+            <a routerLink="/alla-artiklar" >Alla </a>
           </li>
 
-          <li 
+          <li *ngIf = 'inloggad'
           [routerLinkActive]="['class-active']"
           [routerLinkActiveOptions]="{exact: true}">
-            <a routerLink="/ny-artikel" > lägg till </a>
+            <a routerLink="/ny-artikel" > Lägg till </a>
           </li>
 
-          <li 
+          <li
           [routerLinkActive]="['class-active']"
           [routerLinkActiveOptions]="{exact: true}">
-            <a routerLink="/logga-in" > logga in</a>
+            <a routerLink="/logga-in" > Logga in</a>
           </li>
 
         </ul>
       </nav>
-    </div>
+    
   </div>
-  <main><router-outlet></router-outlet>
+  <main>
+    
+    <router-outlet></router-outlet>
     <!-- <main>
       Vad ska man ha här ?
     </main> -->

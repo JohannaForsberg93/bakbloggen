@@ -1,5 +1,4 @@
-
-
+<div *ngIf = 'inloggad'>
 <form #bloggForm="ngForm">
 
     <div class="wrapper">
@@ -15,7 +14,7 @@
                         #title="ngModel" />
                     <div>
                         <div *ngIf="title.errors?.required" class="error-message">
-                            <!-- Enter a title -->
+                            Fyll i en titel.
                         </div>
                     </div>
                 </div>
@@ -31,7 +30,7 @@
                         #author="ngModel" />
                     <div>
                         <div *ngIf="author.errors?.required" class="error-message">
-                            <!-- Enter a Author -->
+                            Du har glömt att fylla i en författare
                         </div>
                     </div>
                 </div>
@@ -46,7 +45,7 @@
                         #timeToRead="ngModel" />
                     <div>
                         <div *ngIf="timeToRead.errors?.required" class="error-message">
-                            <!-- Enter a time to read -->
+                            hur lång tid tar artikeln att läsa?
                         </div>
                     </div>
                 </div>
@@ -63,7 +62,7 @@
                     #content="ngModel" ></textarea>
                 <div>
                     <div *ngIf="content.errors?.required" class="error-message">
-                        <!-- Enter content -->
+                        Din artikel är lite för kort.
                     </div>
                 </div>
             </div>
@@ -71,5 +70,8 @@
         <button (click)="spara()" [disabled]="bloggForm.invalid">Skicka!</button>
     </div>
 </form>   
-<br/><br/>
-    {{ diagnostic }}
+</div>
+
+<div *ngIf = '!inloggad'>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oavMtUWDBTM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

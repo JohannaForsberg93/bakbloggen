@@ -24,8 +24,10 @@ export class ArtiklarService {
     this.artiklar.unshift(artikel);
     localStorage.setItem(ArtiklarService.ARTIKLAR, JSON.stringify(this.artiklar));
   }
-  public deleteArtiklar(){
-    localStorage.clear();
+  public deleteArtikel(idx){
+    
+    this.artiklar.splice(idx, 1);
+    localStorage.setItem(ArtiklarService.ARTIKLAR, JSON.stringify(this.artiklar));
   }
   
 }
