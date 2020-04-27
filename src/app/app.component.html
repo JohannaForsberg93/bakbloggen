@@ -5,7 +5,9 @@
     [routerLinkActive]="['class-active']"
     [routerLinkActiveOptions]="{exact: true}"
     routerLink="">Bakbloggen<img class="test" src="../assets/peach_1f351.png" alt="butt"/>
+    <div class ="inloggad" *ngIf='inloggad'>{{authCheck}}</div>
   </div>
+  
   <div class="header">
       <nav>
         <ul class="nav-links">
@@ -32,7 +34,7 @@
             <a routerLink="/ny-artikel" > Lägg till </a>
           </li>
 
-          <li
+          <li *ngIf ='!inloggad'
           [routerLinkActive]="['class-active']"
           [routerLinkActiveOptions]="{exact: true}">
             <a routerLink="/logga-in" > Logga in</a>
@@ -50,9 +52,15 @@
     </main> -->
   </main>
   <div class="footer">
-    <div>
-      <p>Detta är en bakblogg som innehåller mumsiga recept! </p> 
-    </div>
+    <!-- <div>
+      <ul class="iconer">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      </ul>
+    </div> -->
   </div>
   
     

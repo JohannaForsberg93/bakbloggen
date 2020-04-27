@@ -12,14 +12,17 @@ export class AppComponent {
     
   }
   artiklar;
-  test: boolean = false;
   inloggad = true;
   title = 'bakbloggen';
+  authCheck:string = "Inloggad";
   ngOnInit(): void {
     
       this.artiklar = this.artikelService.getArtiklar();
       this.autentiseringService.observableSource.subscribe(data => {
           this.inloggad = data;
     });
+    
   }
+  
+  
  }

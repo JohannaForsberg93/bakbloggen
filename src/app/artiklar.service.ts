@@ -6,9 +6,9 @@ import { Artiklar } from './artiklar';
 })
 export class ArtiklarService {
   static readonly ARTIKLAR: string = "artiklar";
-    artiklar = [new Artiklar("titel1", "content1", "author1", "time1"),
-    new Artiklar("t2", "c2", "a2", "t2"),
-    new Artiklar("t3,", "c3", "a3", "t3")
+    artiklar = [new Artiklar("titel1", "content1", "author1", 1),
+    new Artiklar("t2", "c2", "a2", 1),
+    new Artiklar("t3,", "c3", "a3", 1)
     ]
     
   constructor() { }

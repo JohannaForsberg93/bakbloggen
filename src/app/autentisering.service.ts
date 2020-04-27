@@ -5,13 +5,13 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AutentiseringService {
-  inloggad:boolean = false;
+  inloggad:boolean = false; //false
   loggain(){
     this.inloggad = true;
     this.source.next(this.inloggad);
   }
   loggaut(){
-    this.inloggad = false;
+    this.inloggad = false; //false
     this.source.next(this.inloggad);
   }
   ärInloggad(){
@@ -20,6 +20,6 @@ export class AutentiseringService {
   constructor() {
   
   }
-  private source = new BehaviorSubject<boolean>(false);
+  private source = new BehaviorSubject<boolean>(false); //false
   public observableSource = this.source.asObservable();
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ArtiklarService } from '../artiklar.service';
 import { AutentiseringService } from '../autentisering.service';
 import { Router } from '@angular/router';
+import { Artiklar } from '../artiklar';
 
 
 
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./alla-artiklar.component.css']
 })
 export class AllaArtiklarComponent implements OnInit {
-
+  model: Artiklar;
   constructor(private artikelService: ArtiklarService, private autentiseringService: AutentiseringService, private router: Router) { }
   artiklar;
   inloggad = false;
