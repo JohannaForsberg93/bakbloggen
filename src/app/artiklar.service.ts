@@ -20,10 +20,10 @@ export class ArtiklarService {
       10
     ),
     new Artiklar(
-      "Styckad kattsoppa,",
-      "Tag din grannes katt och stycka den i bitar och lägg ner i kastrull. Häll i grädde och krydda med salt och peppar. Perfekt att bjuda grannarna på!",
+      "Hallongrottor",
+      "Ingredienser: 4,5 dl vetemjöl, 1 dl socker, 1 tsk bakpulver, 2 tsk vaniljsocker, 200 g smör, 1 dl fast hallonsylt. Blanda samman mjöl, socker, bakpulver och vaniljsocker i en skål. Skär matfettet i mindre bitar och tillsätt det. Arbeta snabbt samman till en deg, gärna i matberedare.Forma degen till valnötsstora bollar. Lägg i muffinsformar på plåtar.Fyllning: Gör en fördjupning i varje kaka och klicka i lite sylt. Grädda i mitten av ugnen i 200 grader i ca 10 minuter.",
       "Johanna Forsberg",
-      3
+      4
     ),
   ];
 
