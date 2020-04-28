@@ -63,50 +63,23 @@ nav > ul{
     top: 0;
     display: grid;
     grid-area: header;
-    
-    /* font-family: monospace; */
-    /* background-color: pink; */
-    
-    /* align-items: center;
-    justify-content: space-around;
-    border-radius: 2px; */
-    /* height: 20em; */
-   
-}
-
-
-
-.nav-links {
-    /* list-style-type: none; */
-    
-    
-    /* background-color: #303030;
-    background-color: #f7f7f7; */
-    
-    
 }
 
 .nav-links a{
     text-decoration: none;
     color: #303030; 
-    /* av nån anledning så blir färgen bättre här än i .nav-links */
     
 }
 .class-active > a{
-    /* color: rgb(197, 24, 165); */
-    /* color: #fc2e9f; */
     color: orangered;
 }
 
 
 .nav-links a:hover {
-    /* color: #8ac6d1;
-    color: #43d8c9; */
     border-bottom: 3px inset orangered;
     
 }
 main{
-    
     margin: 2em 10% 0 10%;
 }
 
@@ -118,10 +91,7 @@ main{
     background-color: #303030;
     color: #f7f7f7;
     padding: 10px;
-    
-    
-    
-    
+     
 }
 /* @media screen and (max-width: 1075px){
      .superheader{
@@ -139,4 +109,4 @@ main{
         
     }
     
-} 
+} */
