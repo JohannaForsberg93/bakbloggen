@@ -1,44 +1,209 @@
-
-h2 {
-    font-size: 2.5em;
-    color: rgb(111, 64, 117);
+img{
+    object-fit: contain;
 }
+.wrapper{
+    
+    background-color: hsl(0, 0%, 97%);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 15em 3em 1fr 20em;
+    grid-template-areas:
+    "superheader"
+    "header"
+    "main"
+    "footer";
+   
+}
+.superheader{
+    background-color: #ffc788;
+    grid-area: superheader;
+    color: #303030;
+    font-size: 8em;
+    padding: 0;
+    text-shadow: 2px 2px 2px black;
+    font-style: italic;
+    text-align: center;
+}
+.inloggad{
+    float: right;
+    font-size: 20px;
+    text-shadow: none;
+}
+
+
+/* .header-wrapper > div > h2:hover{
+    cursor: default;
+} */
+nav{
+    background-color: #f7f7f7; 
+    font-size: 2em;
+
+    -webkit-box-shadow: 0px 2px 5px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px -3px rgba(0,0,0,0.75);
+}
+nav > ul{
+    padding-left: 0;
+    display: inline-flex;
+    width: 100%;
+    list-style-type: none;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    
+    
+}
+
+
 .header{
-    font-family: monospace;
-    background-color: pink;
-    display: flex;
-    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-area: header;
+    
+    /* font-family: monospace; */
+    /* background-color: pink; */
+    
+    /* align-items: center;
     justify-content: space-around;
-    border-radius: 2px;
+    border-radius: 2px; */
+    /* height: 20em; */
    
 }
 
-.class-active{
-    /* color: rgb(197, 24, 165); */
-    color: #fc2e9f;
-}
 
-a:hover {
-    color: #8ac6d1;
-}
 
 .nav-links {
-    list-style-type: none;
-    font-size: 1.5em;
-    font-weight: bolder;
-    color: rgb(111, 64, 117);
+    /* list-style-type: none; */
+    
+    
+    /* background-color: #303030;
+    background-color: #f7f7f7; */
+    
+    
 }
 
-a{
+.nav-links a{
     text-decoration: none;
+    color: #303030; 
+    /* av nån anledning så blir färgen bättre här än i .nav-links */
+    
+}
+.class-active > a{
+    /* color: rgb(197, 24, 165); */
+    /* color: #fc2e9f; */
+    color: orangered;
+}
+
+
+.nav-links a:hover {
+    /* color: #8ac6d1;
+    color: #43d8c9; */
+    border-bottom: 3px inset orangered;
+    
+}
+main{
+    
+    margin: 2em 10% 0 10%;
 }
 
 .footer{
+    display: grid;
+    grid-area: footer;
     font-family: monospace;
-    background-color: #bbded6;
-    display: flex;
+    /* background-image: linear-gradient(to bottom, rgba(255, 68, 0, 0.37), rgba(255,68, 0, 1), #303030); */
     border-radius: 2px;
-    justify-content: space-around;
-    margin-top: 25px;
+    background-color: #ffc788;
+    /* height: 50%; */
+    /* min-height: 50vh; */
+    /* width: 200px; */
+
+    
     
 }
+/* @media screen and (max-width: 1075px){
+     .superheader{
+        font-size: 6em;
+        
+    }
+    .test{
+        height: 20px;
+    }
+    
+}
+@media screen and (max-width: 830px){
+    .superheader{
+        font-size: 4em;
+        
+    }
+    
+} */
+/* ------------kopierade iconer------------------ */
+
+  
+  /* .iconer {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  
+  .iconer li {
+    list-style: none;
+  }
+  
+  .iconer li a {
+    position: relative;
+    width:60px;
+    height:60px;
+    display:block;
+    text-align:center;
+    margin:0 10px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration:none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+  }
+  
+  .iconer li a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  .iconer li a .fa {
+    width: 100%;
+    height:100%;
+    display:block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 12px);
+    font-size:24px;
+    color: #262626;
+    transition: .5s;
+  }
+  
+  .iconer li:nth-child(1) a:hover .fa {
+    color: #3b5998;
+  }
+  
+  .iconer li:nth-child(2) a:hover .fa {
+    color: #00aced;
+  }
+  
+  .iconer li:nth-child(3) a:hover .fa {
+    color: #dd4b39;
+  }
+  
+  .iconer li:nth-child(4) a:hover .fa {
+    color: #007bb6;
+  }
+  
+    .iconer li:nth-child(5) a:hover .fa {
+    color: #e4405f;
+  } */

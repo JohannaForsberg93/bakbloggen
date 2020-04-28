@@ -1,0 +1,91 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
+.wrapper{
+    
+    border-radius: 5px;
+    padding: 2em;
+    
+    /* margin: 4em auto 0 auto; */
+    
+    -webkit-box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.75);
+    
+}
+.topic{
+    color: orangered;
+    display: inline-block;
+    font-size: 2em;
+    border-bottom: 3px inset orangered;
+    margin-bottom: 2em;
+}
+
+
+.form-row > textarea, .form-row > input, select{
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.2em;
+    
+}
+select{
+    height: 100%;
+}
+label{display: block} /* eller? */
+/* .form-group > label{
+    
+    font-size: 1.5em;
+    color: #555454;
+    color: #303030;
+} */
+
+.form-row > input, .form-row > textarea{
+    width: 100%;
+    /* padding: 12px 20px; */
+    /* margin: 8px 0; */
+    /* lalala */
+    /* box-sizing: border-box; */
+    /* border: none; */
+    /* border-radius: 5px;
+     margin-bottom: 2em; 
+     padding: 5px;
+     border-bottom: 2px solid #43d8c9;
+     background-color: white; */
+    
+      
+}
+.flexwrap{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    column-gap: 1em;
+}
+.form-row > textarea{
+    
+    width: 100%;
+    height: 10em;
+    resize: vertical;
+}
+button{
+    float: right;
+}
+button[disabled] { background-color: #ddd; border-color: #ccc; }
+button[disabled]:hover { cursor: not-allowed; }
+
+.error-message {
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+	border: 1px solid transparent;
+    border-radius: .25rem;
+	padding: 0.2em;
+	/* margin: 0.5em */
+}
+
+input.ng-touched { border-left: 5px inset orange; }
+
+.ng-valid[required], .ng-valid.required {
+    border: 3px inset #42A948; /* green */ 
+}
+
+input.ng-invalid, textarea.ng-invalid, select.ng-invalid {
+	border: 3px inset #a94442; /* red */ }
+input.ng-untouched, textarea.ng-untouched, select.ng-untouched { border: 3px inset lightgray}
+
+

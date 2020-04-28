@@ -1,2 +1,9 @@
-<h2>Detta är startsidan</h2><br>
-<p>Här ska den senaste artikeln visas.</p>
+<ul>
+    <li *ngIf= 'artikel'>
+        <div class="titel"> {{ artikel.title }}</div>
+        <div class="author"> {{"Av " + artikel.author }}</div>
+        <div class="timeToRead"> {{ artikel.timeToRead + " min"}}</div>
+        <div class="content"> {{ artikel.content }} </div>
+    </li>
+</ul>
+<div *ngIf = 'artiklar.length == 0'>Det finns inga artiklar</div>

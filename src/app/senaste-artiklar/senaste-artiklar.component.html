@@ -1,1 +1,10 @@
-<h2>Senaste artiklar</h2>
+<ul>
+    <li (click)="readIt(i)" *ngFor="let artikel of artiklar; let i = index;"> 
+        <div class="titel"> {{ artikel.title }} </div>
+        <div class="timeToRead">{{ artikel.timeToRead + " min"}}</div>
+        <div class="author">{{ artikel.author }}</div> 
+        <div class="content"> {{ artikel.content.slice(0, 200) }} </div> 
+    </li>
+</ul>
+<div *ngIf = 'artiklar.length == 0'>Det finns inga artiklar</div>
+

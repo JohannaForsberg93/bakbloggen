@@ -1,4 +1,54 @@
-*{
-    font-family: monospace;
-    text-align: center;
+ul{
+    padding-left: 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: none;
+    grid-gap: 20px;
+}
+li:hover{
+    cursor: pointer;
+}
+li{
+    -webkit-box-shadow: -2px 2px 5px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 2px 5px -3px rgba(0,0,0,0.75);
+    box-shadow: -2px 2px 5px -3px rgba(0,0,0,0.75);
+    font-size: 2em;
+    
+    padding: 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "titel timeToRead" 
+    "author ."
+    "the_content the_content";
+    
+    color: #303030;
+}
+
+.titel{
+    font-size: 1.2em;
+    font-weight: bold;
+    grid-area: titel;
+    color: orangered;
+    
+}
+.author{
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: 100;
+    grid-area: author;
+}
+.timeToRead{
+    font-size: 0.8em;
+    grid-area: timeToRead;
+    display: flex;
+    justify-content: flex-end;
+}
+.content{
+    padding-top: 10px;
+    font-size: 0.6em;
+    grid-area: the_content;
 }
