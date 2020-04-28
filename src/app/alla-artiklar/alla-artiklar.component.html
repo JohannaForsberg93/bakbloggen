@@ -6,8 +6,13 @@
         <div class="buttondiv">
             <button *ngIf ='inloggad' (click)="deleteArtikel(i)">
                 Ta bort
-            </button> 
+            </button>
+            
+            
         </div>
     </li>
 </ul>
 <div *ngIf = 'artiklar.length == 0'>Det finns inga artiklar</div>
+<button *ngIf = "inloggad && artiklar.length==0" (click)="reset()">
+    återställ testartiklar
+</button> 
