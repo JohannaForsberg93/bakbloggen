@@ -1,13 +1,11 @@
-<!-- <h2>Här ska alla titlar på alla artiklar vara.</h2>
-<button (click)="deleteArtiklar()">clear localstorage!</button> -->
 <ul>
-    <li (click)="readIt(i)" *ngFor="let artikel of artiklar; let i = index;"> 
-      <div>{{ artikel.title }}</div> 
-        <div class="buttondiv">
-            <button *ngIf ='inloggad' (click)="deleteArtikel(i)">
-                Ta bort
-            </button> 
-        </div>
-    </li>
+  <li (click)="readIt(i)" *ngFor="let artikel of artiklar; let i = index">
+    <div>{{ artikel.title }}</div>
+    <div class="buttondiv">
+      <button *ngIf="inloggad" (click)="deleteArtikel(i)">
+        Ta bort
+      </button>
+    </div>
+  </li>
 </ul>
-<div *ngIf = 'artiklar.length == 0'>Det finns inga artiklar</div>
+<div *ngIf="artiklar.length == 0">Det finns inga artiklar</div>
