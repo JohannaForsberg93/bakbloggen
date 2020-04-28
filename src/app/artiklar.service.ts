@@ -7,10 +7,27 @@ import { Artiklar } from "./artiklar";
 export class ArtiklarService {
   static readonly ARTIKLAR: string = "artiklar";
   artiklar = [
-    new Artiklar("Title", "content", "author", 1),
-    new Artiklar("Title", "content", "author", 1),
-    new Artiklar("Title,", "content", "author", 1),
+    new Artiklar(
+      "Sega Chokladmuffins",
+      "Jättegoda muffins tjoho!",
+      "Frida Bengtsson",
+      2
+    ),
+    new Artiklar(
+      "Knäckebröd med ost",
+      "Tag ett styck knäckebröd. Skiva ost. Lägg den skivade osten på knäckebrödet",
+      "Oscar Törnqvist",
+      10
+    ),
+    new Artiklar(
+      "Styckad kattsoppa,",
+      "Tag din grannes katt och stycka den i bitar och lägg ner i kastrull. Häll i grädde och krydda med salt och peppar. Perfekt att bjuda grannarna på!",
+      "Johanna Forsberg",
+      3
+    ),
   ];
+
+  // constructor() { }
 
   constructor() {}
 
@@ -34,5 +51,8 @@ export class ArtiklarService {
       ArtiklarService.ARTIKLAR,
       JSON.stringify(this.artiklar)
     );
+  }
+  public deleteAll() {
+    localStorage.clear();
   }
 }

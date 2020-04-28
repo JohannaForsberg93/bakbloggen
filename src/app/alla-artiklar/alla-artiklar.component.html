@@ -1,4 +1,5 @@
 <ul>
+<<<<<<< HEAD
   <li (click)="readIt(i)" *ngFor="let artikel of artiklar; let i = index">
     <div>{{ artikel.title }}</div>
     <div class="buttondiv">
@@ -9,3 +10,20 @@
   </li>
 </ul>
 <div *ngIf="artiklar.length == 0">Det finns inga artiklar</div>
+=======
+    <li (click)="readIt(i)" *ngFor="let artikel of artiklar; let i = index;"> 
+      <div>{{ artikel.title }}</div> 
+        <div class="buttondiv">
+            <button *ngIf ='inloggad' (click)="deleteArtikel(i)">
+                Ta bort
+            </button>
+            
+            
+        </div>
+    </li>
+</ul>
+<div *ngIf = 'artiklar.length == 0'>Det finns inga artiklar</div>
+<button *ngIf = "inloggad && artiklar.length==0" (click)="reset()">
+    återställ testartiklar
+</button> 
+>>>>>>> 53cd33dbb4710fd238b35b450e32fad163d657da

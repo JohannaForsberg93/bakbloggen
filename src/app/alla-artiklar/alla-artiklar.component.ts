@@ -16,8 +16,11 @@ export class AllaArtiklarComponent implements OnInit {
   constructor(private artikelService: ArtiklarService, private autentiseringService: AutentiseringService, private router: Router) { }
   artiklar;
   inloggad = false;
+  visibleResetButton = false;
+  artikelnummer: number;
   ngOnInit(): void {
     this.artiklar = this.artikelService.getArtiklar();
+   
     this.autentiseringService.observableSource.subscribe(data => {
       this.inloggad = data;
     });
@@ -29,6 +32,13 @@ export class AllaArtiklarComponent implements OnInit {
   deleteArtikel(i){
     
     this.artikelService.deleteArtikel(i);
+    
+  }
+  reset(){
+    
+    this.artikelService.deleteAll();
+    location.reload();
+    // this.artikelnummer= this.artikelService.getArtiklar().length;
    
   }
   readIt(i){

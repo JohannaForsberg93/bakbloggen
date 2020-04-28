@@ -8,6 +8,7 @@ import { AllaArtiklarComponent } from './alla-artiklar/alla-artiklar.component';
 import { LoggaInComponent } from './logga-in/logga-in.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NyArtikelComponent } from './ny-artikel/ny-artikel.component';
+import { AutentiseringService } from './autentisering.service';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NyArtikelComponent } from './ny-artikel/ny-artikel.component';
     AllaArtiklarComponent,
     LoggaInComponent,
     NyArtikelComponent
+    
   ],
   imports: [
     BrowserModule,
