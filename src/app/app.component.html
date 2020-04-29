@@ -1,51 +1,64 @@
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap"
+  rel="stylesheet"
+/>
 <div class="wrapper">
-  <div class="superheader"
+  <div
+    class="superheader"
     [routerLinkActive]="['class-active']"
-    [routerLinkActiveOptions]="{exact: true}"
-    routerLink="">Bakbloggen<img class="test" src="../assets/peach_1f351.png" alt="butt"/>
-    <div class ="inloggad" *ngIf='inloggad'>{{authCheck}}</div>
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLink=""
+  >
+    Bakbloggen<img class="test" src="assets/peach_1f351.png" alt="persika" />
+    <div class="inloggad" *ngIf="inloggad">{{ authCheck }}</div>
   </div>
-  
+
   <div class="header">
-      <nav>
-        <ul class="nav-links">
-          <li
+    <nav>
+      <ul class="nav-links">
+        <li
           [routerLinkActive]="['class-active']"
-          [routerLinkActiveOptions]="{exact: true}">
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
           <a routerLink=""> Hem </a>
-          </li>
-          <li
+        </li>
+        <li
           [routerLinkActive]="['class-active']"
-          [routerLinkActiveOptions]="{exact: true}">
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
           <a routerLink="/senaste-artiklar"> Senaste </a>
-          </li>
+        </li>
 
-          <li 
+        <li
           [routerLinkActive]="['class-active']"
-          [routerLinkActiveOptions]="{exact: true}">
-            <a routerLink="/alla-artiklar" >Alla </a>
-          </li>
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/alla-artiklar">Alla </a>
+        </li>
 
-          <li *ngIf = 'inloggad'
+        <li
+          *ngIf="inloggad"
           [routerLinkActive]="['class-active']"
-          [routerLinkActiveOptions]="{exact: true}">
-            <a routerLink="/ny-artikel" > Lägg till </a>
-          </li>
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/ny-artikel"> Lägg till </a>
+        </li>
 
-          <li *ngIf ='!inloggad'
+        <li
+          *ngIf="!inloggad"
           [routerLinkActive]="['class-active']"
-          [routerLinkActiveOptions]="{exact: true}">
-            <a routerLink="/logga-in" > Logga in</a>
-          </li>
-
-        </ul>
-      </nav>
-    
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/logga-in"> Logga in</a>
+        </li>
+      </ul>
+    </nav>
   </div>
   <main>
-    
     <router-outlet></router-outlet>
     <!-- <main>
       Vad ska man ha här ?
@@ -53,8 +66,10 @@
   </main>
   <div class="footer">
     <div>copyright 2020</div>
-    <div>Lägg till massa artiklar så får du se våran as coola header reagera</div>
-     
+    <div>
+      Lägg till massa artiklar så får du se våran as coola header reagera
+    </div>
+
     <!-- <div>
       <ul class="iconer">
         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -65,9 +80,4 @@
       </ul>
     </div> -->
   </div>
-  
-    
-
 </div>
-
-
