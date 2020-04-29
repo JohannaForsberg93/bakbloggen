@@ -32,6 +32,13 @@ export class ArtiklarService {
   public deleteAll(){
     localStorage.clear();
   }
+  public getSenasteArtiklar(n:number){
+    let artiklarJSON = localStorage.getItem(ArtiklarService.ARTIKLAR);
+    if (artiklarJSON) {
+      this.artiklar = JSON.parse(artiklarJSON);
+    }
+    return this.artiklar.slice(0, n);
+  }
   
 }
   

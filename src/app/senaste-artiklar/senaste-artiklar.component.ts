@@ -12,12 +12,9 @@ export class SenasteArtiklarComponent implements OnInit {
   constructor(private artikelService: ArtiklarService, private router: Router) { }
   artiklar;
   ngOnInit(): void {
-    this.artiklar = this.artikelService.getArtiklar().slice(0, 5);
+      this.artiklar = this.artikelService.getSenasteArtiklar(5);
   }
-  // getArtiklar(){
-  //   return this.artikelService.getArtiklar().slice(0, 5);
-    
-  // }
+  
   readIt(i:number){
     this.router.navigate([''], {queryParams: {page: i}});
   }
