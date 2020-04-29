@@ -1,3 +1,5 @@
+review fannys kod
+
 Footern är inte dynamisk. 
 
 kanske lite onödigt att ha latestBlogPosts i servicen(var tydligen ett krav så jag la till det efteråt själv)
