@@ -55,7 +55,6 @@ export class ArtiklarService {
   public deleteAll() {
     localStorage.clear();
   }
-<<<<<<< HEAD
   public getSenasteArtiklar(n:number){
     let artiklarJSON = localStorage.getItem(ArtiklarService.ARTIKLAR);
     if (artiklarJSON) {
@@ -64,6 +63,4 @@ export class ArtiklarService {
     return this.artiklar.slice(0, n);
   }
   
-=======
->>>>>>> d12d19434b7b8cd3c8f28d97c6aabd4eadf2dee2
 }
